@@ -4,6 +4,8 @@
 	error_reporting(0);
 	
 	require ("functions/general.php");
+	require ("functions/dsw.php");
+	require ("functions/ninewest.php");
 	
 	$dbc = mysqli_connect('localhost', 'root', 'mnw1527', 'clearance');
 	
