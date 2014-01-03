@@ -41,7 +41,7 @@
 			$price = $priceArray[$i];
 			$image = $imageArray[$i];
 			
-			echo "<img src='".$image."'><br><a href='".$link."'>".$name."</a><br>".$price."<br><br>";
+			echo "<img src='".$image."' width='100'><br><a href='".$link."'>".$name."</a><br>".$price."<br><br>";
 		}
 
 	}

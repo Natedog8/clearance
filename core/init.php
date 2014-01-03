@@ -6,6 +6,7 @@
 	require ("functions/general.php");
 	require ("functions/dsw.php");
 	require ("functions/ninewest.php");
+	require ("functions/urban.php");
 	
 	$dbc = mysqli_connect('localhost', 'root', 'mnw1527', 'clearance');
 	
