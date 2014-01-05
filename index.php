@@ -1,21 +1,21 @@
 <?php
-		
+
 	include("core/init.php");
 	
-	echo "<h1>Forever 21</h1>";
+	include("includes/header.php");
 	
-	getF21($dbc);
+	$displayAllQuery = mysqli_query($dbc, "SELECT id, name, siteURL, price, imageURL FROM items");
 	
-	echo "<h1>Urban Outfitters</h1>";
-	
-	getUrban($dbc);
-	
-	echo "<h1>Nine West</h1>";
-	
-	getNineWest($dbc);
+	while($row = mysqli_fetch_array($displayAllQuery, MYSQLI_ASSOC)){
+		$id = $row['id'];
+		$name = $row['name'];
+		$link = $row['siteURL'];
+		$price = $row['price'];
+		$image = $row['imageURL'];
+		
+		echo "<div class='product'><a href='".$link."'><img id='".$id."' src='".$image."' width='160'><br><br>".$name."</a><br>".$price."</div>";
+	}
 
-	echo "<h1>DSW</h1>";
-	
-	getDSW($dbc);
+	include("includes/footer.php");
 	
 ?>

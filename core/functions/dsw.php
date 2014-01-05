@@ -36,7 +36,7 @@
 		}
 		
 		for($i = 0, $count = count($priceArray); $i < $count; $i++) {
-			$link  = $linkArray[$i];
+			$link  = "http://www.dsw.com".$linkArray[$i];
 			$name = $nameArray[$i];
 			$price = $priceArray[$i];
 			$image = $imageArray[$i];
@@ -44,9 +44,7 @@
 			// Query inserts all items found into the items table of the database. 
 			//Needs to be updated to check if items already exist, or dump all the items and replace
 			
-			// mysqli_query($dbc, "INSERT INTO items (name, siteURL, price, imageURL) VALUES ('$name', '$link', '$price', '$image')");
-			
-			echo "<img src='".$image."' width='100'><br><a href='http://www.dsw.com".$link."'>".$name."</a><br>".$price."<br><br>";
+			mysqli_query($dbc, "INSERT INTO items (name, siteURL, price, imageURL) VALUES ('$name', '$link', '$price', '$image')");
 		}
 	}
 
