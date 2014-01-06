@@ -39,6 +39,7 @@
 		for($i = 0, $count = count($priceArray); $i < $count; $i++) {
 				$link  = $linkArray[$i];
 				$name = $nameArray[$i];
+				<!-----COding is FUN!!!!/>
 				$price = $priceArray[$i];
 				$image = $imageArray[$i];
 				
